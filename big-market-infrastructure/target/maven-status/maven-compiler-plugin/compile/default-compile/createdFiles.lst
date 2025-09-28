@@ -1,0 +1,5 @@
+cn\bugstack\infrastructure\persistent\po\RaffleActivityCount.class
+cn\bugstack\infrastructure\persistent\po\RaffleActivityAccountFlow.class
+cn\bugstack\infrastructure\persistent\po\RaffleActivityAccount.class
+cn\bugstack\infrastructure\persistent\po\RaffleActivityOrder.class
+cn\bugstack\infrastructure\persistent\po\RaffleActivity.class
