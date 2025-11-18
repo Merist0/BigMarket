@@ -3,6 +3,8 @@ package cn.bugstack.infrastructure.persistent.dao;
 import cn.bugstack.infrastructure.persistent.po.RaffleActivitySku;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @program: big-market-231202-xfg-init-project
  * @description: 商品sku dao
@@ -16,4 +18,6 @@ public interface IRaffleActivitySkuDao {
     void updateActivitySkuStock(Long sku);
 
     void clearActivitySkuStock(Long sku);
+
+    List<RaffleActivitySku> queryActivitySkuListByActivityId(Long activityId);
 }

@@ -17,6 +17,10 @@
         from raffle_activity_sku
         where sku = #{sku}
     </select>
+    <select id="queryActivitySkuListByActivityId"
+            resultType="cn.bugstack.infrastructure.persistent.po.RaffleActivitySku">
+        select sku, actitvity_count_id, stock_count, stock_count_surplus from raffle_activity_sku where activty_id = #{activityId}
+    </select>
     <update id="updateActivitySkuStock" parameterType="java.lang.Long">
         update raffle_activity_sku
         set stock_count_surplus = stock_count_surplus - 1, update_time = now()

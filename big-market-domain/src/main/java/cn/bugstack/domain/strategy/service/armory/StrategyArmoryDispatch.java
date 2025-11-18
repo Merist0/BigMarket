@@ -27,8 +27,15 @@ import java.util.*;
 public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch{
     @Resource
     private IStrategyRepository repository;
+
     @Override
-    public Boolean assembleLotteryStrategy(Long strategyId) {
+    public boolean assembleLotteryStrategyByActivityId(Long activityId) {
+        Long strategyId = repository.queryStrategyIdByActivityId(activityId);
+        return assembleLotteryStrategy(strategyId);
+    }
+
+    @Override
+    public boolean assembleLotteryStrategy(Long strategyId) {
         // 1.查询策略配置
         List<StrategyAwardEntity> strategyAwardEntities = repository.queryStrategyAwardList(strategyId);
         if(strategyAwardEntities == null || strategyAwardEntities.isEmpty()) return false;

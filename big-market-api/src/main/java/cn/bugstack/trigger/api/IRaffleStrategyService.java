@@ -2,8 +2,8 @@ package cn.bugstack.trigger.api;
 
 import cn.bugstack.trigger.api.dto.RaffleAwardListRequestDTO;
 import cn.bugstack.trigger.api.dto.RaffleAwardListResponseDTO;
-import cn.bugstack.trigger.api.dto.RaffleRequestDTO;
-import cn.bugstack.trigger.api.dto.RaffleResponseDTO;
+import cn.bugstack.trigger.api.dto.RaffleStrategyRequestDTO;
+import cn.bugstack.trigger.api.dto.RaffleStrategyResponseDTO;
 import cn.bugstack.types.model.Response;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author: Merist
  * @create: 2025-07-25 10:55
  **/
-public interface IRaffleService {
+public interface IRaffleStrategyService {
     /**
      * 策略装配接口
      * @param strategyId
@@ -34,5 +34,5 @@ public interface IRaffleService {
      * @param requestDTO
      * @return
      */
-    Response<RaffleResponseDTO> randomRaffle(RaffleRequestDTO requestDTO);
+    Response<RaffleStrategyResponseDTO> randomRaffle(RaffleStrategyRequestDTO requestDTO);
 }

@@ -36,6 +36,8 @@ import static cn.bugstack.types.enums.ResponseCode.UN_ASSEMBLED_STRATEGY_ARMORY;
 @Repository
 public class StrategyRepository implements IStrategyRepository {
     @Resource
+    private IRaffleActivityDao raffleActivityDao;
+    @Resource
     private IStrategyRuleDao strategyRuleDao;
     @Resource
     private IStrategyDao strategyDao;
@@ -301,6 +303,13 @@ public class StrategyRepository implements IStrategyRepository {
         // 写入缓存
         redisService.setValue(cacheKey,strategyAwardEntity);
         return strategyAwardEntity;
+
+    }
+
+    @Override
+    public Long queryStrategyIdByActivityId(Long activityId) {
+
+        return raffleActivityDao.queryStrategyIdByActivityId(activityId);
 
     }
 }

@@ -1,6 +1,10 @@
 package cn.bugstack.domain.activity.model.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.checkerframework.checker.units.qual.A;
 
 /**
  * @program: big-market-231202-xfg-init-project
@@ -9,6 +13,9 @@ import lombok.Data;
  * @create: 2025-08-06 10:01
  **/
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class PartakeRaffleActivityEntity {
     /**
      * 用户ID
